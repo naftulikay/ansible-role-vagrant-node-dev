@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  name: vagrant-node-dev
+  version: 'v1.0.0'
+  author: Naftuli Kay
+  description: Install and configure a NodeJS development environment in a Vagrant machine.
+
+  license: MIT
+
+  min_ansible_version: 2.2
+
+  platforms:
+    - name: EL
+      versions: [7]
+    - name: Ubuntu
+      versions: [trusty, xenial]
+
+  galaxy_tags: [node,javascript,vagrant]
+
+dependencies:
+  - role: naftulikay.node-dev
+  - role: naftulikay.vagrant-base

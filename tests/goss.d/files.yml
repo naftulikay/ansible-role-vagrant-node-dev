@@ -1,0 +1,20 @@
+---
+file:
+  '/etc/profile.d/nodenv.sh':
+    exists: true
+    contains:
+      # check for nodenv root being set
+      - /export NODENV_ROOT=\"\$HOME/\.nodenv\"/
+      # check for path modifications
+      - /export PATH=\"\$NODENV_ROOT/bin\:\$PATH\"/
+      # check for init
+      - /\$\(nodenv init \-\)/
+
+  '/etc/profile.d/vagrant.sh':
+    exists: true
+    contains:
+      # check for magic cd
+      - /cd ['"]?/vagrant['"]?/
+
+  '/home/vagrant/.nodenv': { exists: true }
+  '/home/vagrant/.nodenv/versions/6.11.2': { exists: true }

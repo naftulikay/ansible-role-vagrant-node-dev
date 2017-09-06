@@ -1,0 +1,5 @@
+---
+- name: degoss
+  src: naftulikay.degoss
+- src: naftulikay.node-dev
+- src: naftulikay.vagrant-base
