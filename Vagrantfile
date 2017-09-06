@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Configure the VM using Ansible
   config.vm.provision "ansible_local" do |ansible|
     ansible.galaxy_role_file = "requirements.yml"
-    ansible.galaxy_roles_path = ".ansible-roles"
+    ansible.galaxy_roles_path = ".galaxy-roles"
     ansible.provisioning_path = "/vagrant"
     ansible.playbook = "vagrant.yml"
     # allow passing ansible args from environment variable
