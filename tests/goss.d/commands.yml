@@ -1,7 +1,7 @@
 ---
 command:
   # executing nodenv version should return the specified node version
-  'sudo -Hiu vagrant /home/vagrant/.nodenv/bin/ruby version':
+  'sudo -Hiu vagrant /home/vagrant/.nodenv/shims/node -v':
     exit-status: 0
     stdout:
       - 6.11.2
