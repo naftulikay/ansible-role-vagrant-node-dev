@@ -10,7 +10,13 @@ file:
       # check for init
       - /\$\(nodenv init \-\)/
 
-  '/etc/profile.d/vagrant.sh':
+  '/etc/profile.d/node-modules.sh':
+    exists: true
+    contains:
+      # check for local node modules addition to path
+      - /export PATH=\"\$PATH\:\/vagrant\/node_modules\/\.bin\"/
+
+  '/etc/profile.d/vagrant-magic.sh':
     exists: true
     contains:
       # check for magic cd
